@@ -1,0 +1,5 @@
+{
+    "debug.node.autoAttach": "on",
+    "htmlPreview.openWith": "vscode",
+    "htmlPreview.highlight": true
+}

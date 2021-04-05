@@ -1,0 +1,587 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Aginacion de varibles*/
+:root {
+  --azulbase: #59adff;
+
+  /*Variables para preformularios*/
+}
+/*Quitando estilos por defecto a todo*/
+button,
+input[type="text"],
+input[type="button"],
+select,
+textarea {
+  all: unset;
+}
+
+/* Personalizando barra superior*/
+.Barra-Superior {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  box-sizing: border-box;
+  background: var(--azulbase);
+  width: 100%;
+  max-width: 100%;
+  min-width: 99%;
+  height: 12em;
+  min-height: 12em;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 0;
+}
+
+/*Contenedor de imagen he imagen*/
+.Barra-Superior .contenedor-botonimagen {
+  position: relative;
+  margin-right: 40px;
+  top: 2em;
+  left: 2em;
+  width: 15em;
+  min-width: 15em;
+  height: 15em;
+  min-height: 15em;
+  box-sizing: border-box;
+  z-index: 20;
+}
+/* Imagen como tal circulo*/
+.contenedor-botonimagen .imagen {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 0.5px solid white;
+  border-radius: 100%;
+  box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.5);
+  margin: auto;
+}
+/* Contenedor de boton de cambio*/
+.contenedor-botonimagen .boton-cambio {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  border-radius: 100%;
+  width: 40px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Propiamente el boton de cambio*/
+.contenedor-botonimagen .boton-cambio button {
+  border: none;
+  background: var(--azulbase);
+  border-radius: 100%;
+  width: 80%;
+  height: 80%;
+}
+
+/*Hover del boton cambio-img*/
+
+.contenedor-botonimagen .boton-cambio:hover {
+  border-color: var(--azulbase);
+  opacity: 0.8;
+  transition-property: border opacity;
+  transition-duration: 0.5s;
+}
+.contenedor-botonimagen .boton-cambio:hover + .imagen {
+  border: 1px solid rgba(3, 3, 3, 0.288);
+  transition: border-color 1s ease;
+}
+
+/*Seccion de preformulario*/
+.preformulario {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  width: 280px;
+  z-index: 10;
+}
+
+label,
+input[type="text"],
+input[type="button"] {
+  margin: auto;
+  padding: 5px 5px;
+  height: 35px;
+  width: 80%;
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  border: none;
+}
+input[type="Text"] {
+  position: relative;
+  padding: 10px 10px 5px 10px;
+  color: rgba(197, 197, 197, 0.73);
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  border-bottom: 2px solid white;
+  z-index: 20;
+}
+label {
+  padding-left: 10px;
+  user-select: none;
+  position: absolute;
+  display: block;
+  margin-top: -55px;
+  margin-left: 7.5%;
+  z-index: 19;
+}
+.preformulario [name="txtcedula"] {
+  margin-top: 50px;
+}
+/*Interacción de formulario*/
+
+input[type="text"]:hover {
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+}
+input[type="text"]:focus {
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+}
+input[type="text"]:focus + label {
+  margin-top: -82px;
+  font-size: 12px;
+  transition: margin-top 0.5s;
+}
+
+/*Seccion inferior*/
+
+/*Conenedor del grid*/
+.gridcontenedor {
+  margin: 8em auto 0 auto;
+  width: 95%;
+  /*Habilitar un max heig*/
+  border: 1px solid blue;
+  min-height: 600px;
+  max-height: 600px;
+  display: grid;
+  grid-auto-columns: 12px;
+  column-gap: 5px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/*Linea de posición*/
+
+.gridcontenedor .barra-contadora {
+  height: 480px;
+  display: flex;
+  justify-content: center;
+}
+
+.gridcontenedor .barra-contadora .linea-contenedora {
+  background: var(--azulbase);
+  width: 1.8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.gridcontenedor .barra-contadora .linea-contenedora div {
+  margin-bottom: 58px;
+  border-radius: 100%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  background: var(--azulbase);
+}
+.gridcontenedor .barra-contadora .linea-contenedora aside {
+  background: white;
+  border: 1px solid var(--azulbase);
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin-left: -9px;
+}
+
+/*Seccion de pro formulario*/
+
+.gridcontenedor .proformulario {
+  position: relative;
+  padding: 5px;
+  grid-column: 2/7;
+  width: 95%;
+  height: 78%;
+  margin: 150px auto 0 auto;
+  background: white;
+  border: 1px solid salmon;
+  z-index: 10;
+}
+
+/*Contenedor de secciones de formularios*/
+.proformulario .informacionde-contacto,
+.Estudios,
+.formularioseccion-3 {
+  border-radius: 12px;
+  /* border: solid 1px rgba(89, 173, 255, 0.18); */
+  box-shadow: 2px 8px 4px -2px rgba(100, 100, 100, 0.5),
+    -2px -2px 2px rgba(100, 100, 100, 0.5),
+    -2px -2px 2px rgba(100, 100, 100, 0.5),
+    1.5px 0px 2px rgba(100, 100, 100, 0.5);
+  height: 65%;
+  max-height: 38em;
+  width: 88%;
+  position: relative;
+  background: white;
+  margin: 20px auto 0 auto;
+  z-index: 15;
+}
+/*Los titulos de los formularios*/
+.proformulario h2 {
+  text-align: right;
+  margin-bottom: 45px;
+  padding: 10px 20px 0 0;
+}
+
+.proformulario h2,
+label,
+select {
+  color: rgba(197, 197, 197, 0.73);
+  font-family: "Segoe UI";
+  font-size: 18px;
+  font-weight: 500;
+}
+/*Estilos de los inputs de los formularios*/
+.gridcontenedor .proformulario input[type="text"],
+select,
+textarea {
+  background: transparent;
+  border-bottom: 2px solid var(--azulbase);
+}
+
+.gridcontenedor .proformulario .informacionde-contacto div,
+.Estudios div {
+  /* border: 1px solid black; */
+      margin-bottom: 30px;
+}
+
+/*--------------------------------------------*/
+
+/*Parte inferior departamento y municipio*/
+/*Estilo base para todos*/
+.gridcontenedor .proformulario .informacionde-contacto .departamento-y-ciudad {
+  width: 88%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Posicionamiento*/
+.gridcontenedor .proformulario .informacionde-contacto .departamento-y-ciudad {
+  margin: auto;
+}
+/*Estilo para los select*/
+.informacionde-contacto .departamento-y-ciudad select{
+
+  margin-top: 40px;
+}
+select {
+  background-size: 10px;
+  padding: -10px -10px;
+  background-repeat: no-repeat;
+  background-position: 98% center;
+  width: 40%;
+  height: 32px;
+  text-indent: 5px;
+}
+
+select:hover {
+  background-image: url(../imagenes/icoselect.png); /*Flecha del select */
+}
+.contenedorboton-siguiente {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+}
+
+input[type="button"],
+.contenido_defomrularioversion-1 > div + article + div >  button {
+  grid-column: 10/11;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px 8px 8px 8px;
+  width: 100px;
+  height: 30px;
+  background: var(--azulbase);
+}
+input[type="button"]:hover {
+  border-radius: 14px 48px 48px 14px;
+  transition: border-radius 1s ease;
+}
+/*------------------------------*/
+
+/********************************/
+
+/*Experiencia laboral*/
+
+/*****************************/
+.fseccion2 div input[type="checkbox"] {
+  display: none;
+}
+.fseccion2 div input[type="checkbox"] + .Inconoselector {
+  cursor: pointer;
+}
+.fseccion2 div .Inconoselector {
+  margin-top: -40px;
+}
+.fseccion2 div .Inconoselector:before {
+  content: url("../imagenes/icotextodisable.png");
+  background: transparent;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px; /*Es solo para separarlo del texto*/
+}
+.fseccion2 div input[type="checkbox"]:checked + .Inconoselector:before {
+  content: url("../imagenes/icontexto.png");
+  font-size: 15px;
+  color: #88c64b;
+  font-family: "Times New Roman";
+}
+/*******************************/
+textarea {
+  margin: auto;
+  padding: 5px 5px;
+  height: 80px;
+  width: 80%;
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(197, 197, 197, 0.73);
+}
+
+/******Grupo de años**********/
+
+.grupoaño {
+  padding: 0 30px;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grupoaño div label {
+  margin-left: 14%;
+}
+
+/******Grupo mostrar*/
+.grupogrid {
+  display: flex;
+  justify-content: center;
+}
+
+.grupogrid div {
+  width: 38%;
+  margin: 0 2px 0 2px;
+  height: 40px;
+}
+.grupogrid div:nth-child(1) {
+  width: 170px;
+}
+.grupogrid div:nth-child(2) {
+  width: 70px;
+  margin: 0 2px 0 2px;
+  height: 40px;
+}
+.grupogrid div .Inconoselector {
+  font-size: 14px;
+  padding-left: 0;
+  margin: 0;
+}
+
+/***************************/
+h3 {
+  /* background: red; */
+  padding: 5px 0 10px 40px;
+  font-weight: 100;
+  color: #d3d3d3;
+}
+/****************************/
+
+/**********Tercera seccion***********/
+.contenido_defomrularioversion-1,
+.contenido_defomrularioversion-2,
+.contenido_defomrularioversion-3 {
+  position: relative;
+  background: white;
+  width: 98%;
+  margin: 0 auto;
+  border: 1px dashed magenta;
+  height: 450px;
+  max-height: 450px;
+}
+
+/************************************/
+
+.contenido_defomrularioversion-1 > div > div{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+}
+.contenido_defomrularioversion-1 > div > div >div div{
+  display: grid;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  /*Este es el contenedro del select*/
+}
+.contenido_defomrularioversion-1 > div > div >div div select{
+  width: 80%;
+  /*Para que el select sea mas grande*/
+}
+.contenido_defomrularioversion-1 > div > div >div label{
+  width: 200px;
+  padding-left: 0px;
+  margin-left: 10px;
+  font-size: 12px;
+/* Para darle estabilidad y color a los label de esta caja */
+}
+.contenido_defomrularioversion-1 > div > div:first-child{
+   display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Divide el texto y el contenedor de archivos */
+}
+
+.contenido_defomrularioversion-1 article{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+}
+.contenido_defomrularioversion-1 article .contenedordearchivos{
+border: 2px groove rgb(255, 255, 255);
+background: var(--azulbase);
+box-shadow: 2px 1px 2px rgba(255, 255, 255, 0.73);
+ height:180px;
+ margin: 20px 25px 0 2px;
+ /*Para caja contenedora de archivos*/
+}
+
+.contenido_defomrularioversion-1 > div + article > div > textarea{
+ height:130px;
+ /*Le permite altura a la descripcion del text arear*/
+}
+.contenido_defomrularioversion-1 > div + article > div > div > label{
+  margin-left: 0.5%;
+  /* le permite espacio respetable al input de univerisda */
+ }
+ .contenido_defomrularioversion-1 > div + article > div > div{
+   margin-top: 18px;
+   /* separa el inpud de la universidad de muy arriba  */
+ }
+
+ /*Manejo del boton*/
+ .btn-denvio{
+   width: 160px;
+   position: absolute;
+   background:rgb(255, 255, 255);
+   margin-top: 20px;
+   right: 0px;
+
+ }
+
+ .contenido_defomrularioversion-1 > div + article + div >  input{
+   background: url("../imagenes/archivoenable.png") no-repeat;
+   background-position: center;
+   position: relative;
+   z-index: 25;
+   background-size: 40px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  
+}
+ .contenido_defomrularioversion-1 > div + article + div >  input:hover{
+  background: url("../imagenes/archivodisable.png") no-repeat;
+   background-position: center;
+   background-size: 40px;
+   border-radius: 0;
+  }
+  @keyframes ejemplo{
+      0% {transform:  translate(0px,0);}
+      15% {transform:  translate(-130px,0);}
+      20% {box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);}
+      70%  {transform:  translate(-130px,0);}
+      80%  {transform:  translate(-180px,0);}
+      100% {transform:  translate(0px,0);}
+      
+  }
+
+       
+ .contenido_defomrularioversion-1 > div + article + div >  input:hover + .textoingreso{
+  animation-name: ejemplo;
+  animation-duration: 5s;
+  animation-direction: alternate; 
+  animation-timing-function: ease-in-out;
+  
+}
+
+/**Ejemplo de animacion*/
+.textoingreso{
+  background: var(--azulbase);
+  padding: 0px 2px 0px 8px;
+  bottom: 12px;
+  color:white;
+  right: 30px;
+  width: 130px;
+  border-radius: 15px;
+  height: 15px;
+  position: absolute;
+  /* z-index: 54; */
+  font-size: 8px;
+
+}
+.cuadroblanco{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  
+  border-radius: 85.8px 0 0 108.8px;
+  top: 0px;
+  z-index: 24;
+}
+/*****************************/
+.gridcontenedor .hojareveladora {
+  background: rgb(202, 153, 80);
+  grid-column: 7/13;
+}
+
+/*Querys*/
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+  /*Contenedor de formlarios*/
+  .gridcontenedor .proformulario {
+    grid-column: 2/-1;
+  }
+  /*Linea de formularios*/
+  .gridcontenedor .barra-contadora {
+    height: 680px;
+  }
+  .gridcontenedor .barra-contadora .linea-contenedora div {
+    margin-bottom: 98px;
+  }
+
+  .Barra-Superior {
+    flex-direction: column;
+    align-items: center;
+  }
+  .preformulario {
+    top: -30px;
+    width: 70%;
+    z-index: 9;
+  }
+  .gridcontenedor {
+    margin: 18em auto 0 auto;
+  }
+}
+
+/*************/
+.preformulario label,
+.preformulario input {
+  color: white;
+}

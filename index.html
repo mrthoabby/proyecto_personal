@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!--Barra superrio azul-->
+    <header class="Barra-Superior">
+      <!-- Seccion contenedora de imagen-->
+      <div class="contenedor-botonimagen">
+        <div class="boton-cambio">
+          <button></button> 
+        </div>
+        <div class="imagen"></div>
+      </div>
+
+      <!--Seccion contenedora de pre formulario-->
+      <div class="preformulario">
+        <div>
+          <input
+            type="text"
+            name="txtcedula"
+            id="txtcedula"
+            autocomplete="off"
+          />
+          <label for="txtcedula">Número de documento</label>
+        </div>
+        <div>
+          <input
+            type="text"
+            name="txtnombres"
+            id="txtnombres"
+            class="txtnombres"
+            autocomplete="off"
+          />
+          <label for="txtnombres">Nombres completos</label>
+        </div>
+      </div>
+    </header>
+
+    <!--Grid contenedor de la pagian-->
+    <main class="gridcontenedor">
+      <!--Barra contadora de formularios-->
+      <div class="barra-contadora">
+        <div class="linea-contenedora">
+          <div class="nivel1"></div>
+          <div class="nivel2"></div>
+          <div class="nivel3"></div>
+          <aside class="circuloextra"></aside>
+        </div>
+      </div>
+
+      <!--Cuandro contenedor de formularios-->
+      <div class="proformulario">
+        <!--Formulario 1 -->
+        <div class="informacionde-contacto">
+          <form action="" class="">
+            <h2>Informacion de contacto</h2>
+            <div>
+              <input
+                type="text"
+                name=""
+                id="telefono"
+                class="telefono"
+                autocomplete="off"
+              />
+              <label for="telefono">Telefono de contacto</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name=""
+                id="email"
+                class="correo-electronico"
+                autocomplete="off"
+              />
+              <label for="correo-electronico" class="email"
+                >Correo electronico
+              </label>
+            </div>
+            <div>
+              <input
+                type="text"
+                name=""
+                id="direccion"
+                class="direccion"
+                autocomplete="off"
+              />
+              <label for="direccion" class="direccion"
+                >Direccion de residencia
+              </label>
+            </div>
+            <div class="departamento-y-ciudad">
+              <select name="" id="">
+                <option value="" selected disabled>Departamento</option>
+              </select>
+              <select name="" id="">
+                <option value="" selected disabled>Ciudad</option>
+              </select>
+            </div>
+            <div class="contenedorboton-siguiente">
+              <input type="button" value="Siguiente" />
+            </div>
+          </form>
+        </div>
+
+        <!--Formulario 2 -->
+        <div class="Estudios">
+          <form action="" class="fseccion2">
+            <h2>Experiencia Laboral</h2>
+            <div>
+              <input type="checkbox" id="check1" checked />
+              <label class="Inconoselector" for="check1"
+                >Habla sobre ti (opcional)</label
+              >
+              <textarea
+                name="descripcion"
+                id="descripcion"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+
+            <h3>Fecha de nacimiento</h3>
+
+            <div class="grupoaño">
+              <div>
+                <input type="text" name="" id="" class="d" />
+                <label for="">Dia</label>
+              </div>
+              <div>
+                <input type="text" name="" id="" class="m" />
+                <label for="">Mes</label>
+              </div>
+              <div>
+                <input type="text" name="" id="" class="y" />
+                <label for="">Año</label>
+              </div>
+            </div>
+            <h3>Fecha de nacimiento</h3>
+            <div class="grupogrid">
+              <div>
+                <input
+                  type="checkbox"
+                  id="check2"
+                  class="mostrarfecha"
+                  checked
+                />
+                <label class="Inconoselector" for="check2"
+                  >Fecha de nacimiento</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="check3"
+                  class="mostraredad"
+                  checked
+                />
+                <label class="Inconoselector" for="check3">Edad</label>
+              </div>
+            </div>
+
+            <div class="contenedorboton-siguiente">
+              <input type="button" value="Siguiente" />
+            </div>
+          </form>
+        </div>
+
+        <!--Formulario 3 -->
+        <div class="formularioseccion-3">
+          <form action="" class="fseccion2">
+            <h2>Anexos</h2>
+            <div class="contenido_defomrularioversion-1">
+              <div>
+                <div>
+                  <div>
+                    <input type="text" />
+                    <label for="">Nombre de la empresa</label>
+                  </div>
+                  <div>
+                    <input type="text" />
+                    <label for="">Cargo depempeñado</label>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <h3>Desde</h3>
+                    <div>
+                      <select name="" id=""></select>
+                      <select name="" id=""></select>
+                      <select name="" id=""></select>
+                    </div>
+                  </div>
+                  <div>
+                    <h3>Hasta</h3>
+                    <div>
+                      <select name="" id=""></select>
+                      <select name="" id=""></select>
+                      <select name="" id=""></select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <article>
+                <div>
+                  <h3>Descripcion</h3>
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="contenedordearchivos">
+                  Contenedor de archivo
+                </div>
+              </article>
+              <div class="btn-denvio">
+                <input type="button" value="" />
+                <h5 class="textoingreso">Click para agregar un archivo</h5>
+                <div class="cuadroblanco"></div>
+              </div>
+            </div>
+            <div class="contenido_defomrularioversion-1">
+              <div>
+                <div>
+                  <div>
+                    <input type="text" />
+                    <label for="">Nombre de la empresa</label>
+                  </div>
+                  <div>
+                    <input type="text" />
+                    <label for="">Cargo depempeñado</label>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <h3>Desde</h3>
+                    <div>
+                      <select name="" id=""></select>
+                      <select name="" id=""></select>
+                      <select name="" id=""></select>
+                    </div>
+                  </div>
+                  <div>
+                    <h3>Hasta</h3>
+                    <div>
+                      <select name="" id=""></select>
+                      <select name="" id=""></select>
+                      <select name="" id=""></select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <article>
+                <div>
+                  <div>
+                    <input type="text" name="" id="universidad" />
+                    <label for="universidad">Instituto o universidad</label>
+                  </div>
+                </div>
+                <div class="contenedordearchivos">
+                  Contenedor de archivo
+                </div>
+              </article>
+              <div class="btn-denvio">
+                <input type="button" value="" />
+                <h5 class="textoingreso">Click para agregar un archivo</h5>
+                
+                <div class="cuadroblanco"></div>
+              </div>
+            </div>
+            <div class="contenido_defomrularioversion-1">
+              <h3>Sugerencias</h3>
+              <article>
+                <div class="contenedor-de-listas de sugerencias">
+                  <h3>Postulacion</h3>
+                  <ul>
+                    <li>aqui van los determinados datos
+                    </li>
+                    <li>aqui van los determinados datos
+                    </li>
+                    <li>aqui van los determinados datos
+                    </li>
+                    <li>aqui van los determinados datos
+                    </li>
+                  </ul>
+                  <h3>Firma de contrato</h3>
+                  <ul>
+                    <li>aqui van los determinados datos
+                    </li>
+                    <li>aqui van los determinados datos
+                    </li>
+                    <li>aqui van los determinados datos
+                    </li>
+                    <li>aqui van los determinados datos
+                    </li>
+                  </ul>
+                </div>
+                <div class="contenedordearchivos"></div>
+              </article>
+            </div>
+            <div class="contenido-movilizador">
+              <div class="barrarecta">
+                <div class="circulosbrecta"></div>
+                <div class="circulosbrecta"></div>
+                <div class="circulosbrecta"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Hoja reveladora -->
+      <aside class="hojareveladora">
+        <div class="hrevelador"></div>
+        <div class="hcontroladordehoja"></div>
+      </aside>
+    </main>
+
+
+    <script src="JS/scrip.js">
+    
+    </script>
+  </body>
+</html>
